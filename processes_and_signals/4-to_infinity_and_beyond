@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-
-while true
-do
+# Display a message indefinitely with a 2-second delay
+while true; do
     echo "To infinity and beyond"
     sleep 2
 done
