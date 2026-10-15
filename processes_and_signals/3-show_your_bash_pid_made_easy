@@ -1,16 +1,3 @@
 #!/usr/bin/env bash
-
-for pid in /proc/[0-9]*/; do
-    pid=${pid#/proc/}
-    pid=${pid%/}
-
-    if [ -r "/proc/$pid/comm" ]; then
-        name=$(cat "/proc/$pid/comm")
-
-        case "$name" in
-            *bash*)
-                echo "$pid $name"
-                ;;
-        esac
-    fi
-done
+# Display the PID and name of processes containing bash
+pgrep -l bash
