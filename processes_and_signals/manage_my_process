@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-
-while true
-do
+# Write a heartbeat message to a file every two seconds
+while true; do
     echo "I am alive!" >> /tmp/my_process
     sleep 2
 done
